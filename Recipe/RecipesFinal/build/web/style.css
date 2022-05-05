@@ -1,0 +1,402 @@
+body{
+    margin:0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://i.hizliresim.com/pgb02fg.jpg );
+    background-size: cover;
+    
+}
+
+.card{
+    background-color:#073f68;
+    color:black;
+}
+.card:hover{
+    background-color:white;
+}
+
+.card:hover  *{
+    color:#073f68;
+    transition:0.5s;
+}
+.name{
+    background-color:none;
+    color:white;
+}
+
+.recipeName{
+  
+}
+.explanation{
+    width:55%; 
+}
+.recipe{
+height:1000px;
+}
+.img{
+  float:left;
+  margin-left:80px;
+  margin-top: 80px;
+  border:2px solid #073f68;
+  border-radius:10px;
+}
+.dr{
+    display:inline-block;
+    position: relative;
+}
+.dr div{
+     background-color:none;
+     box-shadow: 0 4px 8 pc rgba(0,0,0,0.4);
+     z-index:1;
+     visibility:hidden;
+     position:absolute;
+     min-width:100%;
+     opacity:0;
+     transition: .3s;
+ 
+
+}
+.dr:hover div{
+    visibility:visible;
+    opacity:1;
+}
+
+.carousel-inner img {
+    width: 35%;
+    height: 35%;
+  }
+  .hesabim{
+    background-color:#073f68;
+    color:white;
+    font-size:25 px;
+    text-decoration:none;
+    border:1px solid white;
+    font-weight: bold;
+    padding:10px;
+    transition: 0.5s;
+    opacity:1;
+    min-width:100%;
+  }
+.hesabim:hover{
+    color:#073f68;
+    background-color: white;
+    }
+  .loginn{
+    background-color:#073f68;
+    color:white;
+    font-size:25 px;
+    text-decoration:none;
+    border:1px solid white;
+    font-weight: bold;
+    padding:10px;
+    transition: 0.5s;
+    }
+    .loginn:hover {
+    color:#073f68;
+    background-color: white;
+    }
+.menu_bar{
+    height: 150px;
+    width:100%;
+    background-color:#073f68;
+    display: flex;
+    justify-content: space-between;
+    margin-top:-12px;
+}
+.search-box{
+    margin-top: 20px;
+    margin-left:-50px;
+    position: absolute;
+    left:40%;
+    top:8% ;
+    transform:translate(-50%,-50%);
+    background:WHITE;
+    height: 10px;
+    border-radius: 10px;
+    padding: 15px;
+    } 
+.search-txt{
+        margin-top:-15px;
+        border:none;
+        outline: none;
+        background: white;
+        float: left;
+        padding: 0;
+        color: black;
+        font-size:20px;
+        transform: 0.4s;
+        width:450px;
+        padding: 0 6 px;
+ }
+.menu .search-btn{
+         background-color: red;
+        color:white;
+        float: right;
+        width: 31px;
+        height: 32px;
+        border-radius:30%;
+        display: flex;
+        justify-content:center;
+        align-items:center;
+        margin-top: -16px;
+        border:none;
+        margin-right: -15px;
+    
+}
+.logo{
+    margin-top: -17px;
+    display: flex;
+    margin-left: -10px;
+}
+.logo img{
+    height: 200px;
+
+}
+.yazi{
+   margin-left:-800px;
+   margin-top:1px;
+
+}
+.yazi h1{
+   
+    margin-top: 30px;
+    font-size:50px;
+    color:white;
+    font-family: 'Pattaya', sans-serif;
+  
+}
+.yazi h2{
+    margin-left: 8px;
+    margin-top: -30px;
+    font-size: 50px;
+    color:white;
+    font-family: 'Pattaya', sans-serif;
+
+}
+
+.menu ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 5px;
+    margin:5px; 
+    margin-top: 60px;
+}
+.menu a{
+  
+    color:white;
+    font-size:25 px;
+    text-decoration:none;
+    border:1px solid white;
+    font-weight: bold;
+    padding:10px;
+    transition: 0.5s;
+}
+
+
+.menu li:hover a{
+    color:#073f68;
+    background-color: white;
+}
+.galeri{
+    background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(https://i.hizliresim.com/o26pnlo.jpg);
+    width: 100;
+    height:50vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.galeri .web{
+    color:white;
+    font-family: calibri;
+    font-size:30px;
+}
+.galeri a{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:white;
+    font-size: 20px;
+    padding:10px 30px;
+    text-decoration: none;
+    box-sizing:border-box;
+    border: 1px solid white;
+    background-color:rgba(255,255,255,0.3);
+    transition: 0.5s;
+}
+.galeri a:hover{
+    color:#073f68;
+    background-color: white;
+    padding: 10px;
+}
+.web h4{
+    border-bottom:1px solid white;
+    padding-bottom: 20px;
+}
+
+.orta_alan{
+    display: flex;
+    width: 95%;
+    justify-content: space-around;
+}
+.orta_alan a{
+    text-align:center;
+    margin:auto;
+    color:white;
+    text-decoration: none;
+}
+.orta{
+    width: 16%;
+
+    border-radius: 15px;
+    margin:2% 0;
+    box-sizing:border-box;
+    background-color: #073f68;
+}
+.orta .icerik{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    margin-top:50px;
+    font-family:verdana;
+    color:white;
+    text-align: center;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0, 0.4);
+}
+.orta p{text-indent:15px;}
+.orta img{}
+
+.alt_alan{
+    margin-top:-12px;
+    display: flex;
+    width:100%;
+    height:30vh;
+    background-color:#073f68;
+    color: white;
+}
+.depo1{
+    width:40%;
+    padding:35px;
+    box-sizing:border-box;
+    text-align:justify;
+    font-family: courier;
+    float:left;
+    }
+.depo2{
+    width:40%;
+    padding:35px;
+    box-sizing:border-box;
+    text-align:justify;
+    font-family: courier;
+    margin-right:-500px;
+}
+.sosyal{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    width: 100%;
+    font-size: 40px;
+    border-top: 1px solid white;
+}
+.alt_alan i{ margin: 20px;}
+.alt_alan a{color: white;}
+.sosyal a:nth-child(1):hover{color:blue;}
+.sosyal a:nth-child(2):hover{color:aqua}
+.sosyal a:nth-child(3):hover{color:#D8090D;}
+.sosyal a:nth-child(4):hover{color:#26E03B;}
+
+  .profil{
+    background-color:red;
+    color:white;
+    font-size:25 px;
+    text-decoration:none;
+    border:1px solid white;
+    font-weight: bold;
+    padding:10px;
+    transition: 0.5s;
+    opacity:1;
+    min-width:75%;
+    margin-top:10px;
+  }
+.profil:hover{
+    color:red;
+    background-color: white;
+  
+}
+.Duzenletarif{
+    background-color:red;
+    color:white;
+    font-size:25 px;
+    text-decoration:none;
+    border: none;
+    font-weight: bold;
+    padding:4px;
+    transition: 0.5s;
+    opacity:1;
+    min-width:8%;
+    margin-right:3%;
+    
+    
+}
+.Duzenletarif:hover{
+    color:red;
+    background-color: white; 
+}
+
+.Sil{
+    background-color:red;
+    color:white;
+    font-size:25 px;
+    text-decoration:none;
+    border: none;
+    font-weight: bold;
+    padding:4px;
+    transition: 0.5s;
+    opacity:1;
+    min-width:20%;
+    margin-left:15px;    
+}
+.Sil:hover{
+    color:red;
+    background-color: white; 
+}
+
+.input-edit{
+    width: 100%;
+    padding:10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1 px solid #999;
+    outline:none;
+    background: transparent;
+    margin-left: 10px;
+}
+ .edit{
+    background-color:red;
+    color:white;
+    font-size:25 px;
+    text-decoration:none;
+    border:1px solid white;
+    font-weight: bold;
+    padding:10px;
+    transition: 0.5s;
+    opacity:1;
+    min-width:75%;
+    margin-top:50px;
+    margin-left:63px;
+  }
+.edit:hover{
+    color:red;
+    background-color: white;
+  
+}
+.icons{
+    display:block;
+}

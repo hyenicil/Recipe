@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Yemeklerbenden</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="addrecipe.css" />
+        <link rel="stylesheet" href="css/all.css" />
+        <link rel="stylesheet" href="https://css.gg/search.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Pattaya" rel="stylesheet" />
+        <link rel=" short icon" href="https://i.hizliresim.com/xc3rnyh.png" />
+         <f:metadata>
+               <f:event type="preRenderView" listener="#{dbBean.getRecipe(tekBaslik.recipeName)}"/>
+        </f:metadata>
+    </h:head> 
+
+    <h:body>      
+                    
+                 
+                    
+                   
+                    
+        <ui:include src="navbar.xhtml" /> 
+        <div class="heroos" >
+            <div class="form-boxes">
+                <h:form class="input-groups"  >
+
+                    <h:inputText      class="input-fields"  value="#{dbBean.recipe.recipeName}" a:placeholder="Tarif Baslik:" > </h:inputText> 
+                    <h:inputTextarea   class="input-areas"  a:placeholder="Malzeme" value="#{dbBean.recipe.material}"  /> 
+                    <h:inputTextarea  class="input-areas" a:placeholder="Anlatim" value="#{dbBean.recipe.explanation}"  />
+                    <h:inputText      class="input-fields" a:placeholder="Resim Url:" value="#{dbBean.recipe.images}" /> 
+                    <br/>
+                    <h:selectOneMenu class="listmenu" value="#{dbBean.recipe.variety}" >
+                        <f:selectItem itemValue="Çorba" itemLabel="Çorba" />
+                         <f:selectItem itemValue="Salata" itemLabel="Salata" />
+                          <f:selectItem  itemValue="Zeytinnyağlı" itemLabel="Zeytinyağlı" />
+                           <f:selectItem  itemValue="Ana Yemek" itemLabel="Ana Yemek" />
+                            <f:selectItem  itemValue="Tatlı" itemLabel="Tatlı" />
+                         
+                    </h:selectOneMenu> 
+                   
+                                             
+                       #{dbBean.recipe.setdchefId(dbBean.user.userId)}
+                       #{dbBean.recipe.setComment("Henüz yorum girilmedi")}
+                       <h:commandButton type="submit" class="regis" value="KAYDET" action="#{dbBean.recipeUpdate()}" />
+                </h:form>
+            </div>
+        </div>
+    </h:body>
+</html>
+

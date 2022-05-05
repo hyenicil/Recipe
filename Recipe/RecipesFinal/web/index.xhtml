@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Yemeklerbenden</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="css/all.css" />
+        <link rel="stylesheet" href="https://css.gg/search.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Pattaya" rel="stylesheet" />
+        <link rel=" short icon" href="https://i.hizliresim.com/xc3rnyh.png" />
+      
+        <f:metadata>
+            <f:event type="preRenderView" listener="#{dbBean.recipesListPreRenderViewName()}"/>
+        </f:metadata>
+        <f:metadata>
+            <f:event type="preRenderView" listener="#{dbBean.recipesListPreRenderImages()}"/>
+        </f:metadata>
+    </h:head>
+    <h:body>
+        <ui:include src="navbar.xhtml" /> 
+
+        <h:form>
+
+
+            <div id="demo" class="carousel slide" data-ride="carousel" >
+                <ul class="carousel-indicators">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                    <li data-target="#demo" data-slide-to="2"></li>
+                    <li data-target="#demo" data-slide-to="3"></li>
+                    <li data-target="#demo" data-slide-to="4"></li>
+                    <li data-target="#demo" data-slide-to="5"></li>
+                    <li data-target="#demo" data-slide-to="6"></li>
+                    <li data-target="#demo" data-slide-to="7"></li>
+                    <li data-target="#demo" data-slide-to="8"></li>
+                    <li data-target="#demo" data-slide-to="9"></li>
+                    <li data-target="#demo" data-slide-to="10"></li>
+                </ul>  
+                <div class="carousel-inner" style="text-align: center" >
+                    <ui:repeat var="tekBaslik" value="#{dbBean.recipelistName}" varStatus="metadata"  begin="18" end="18" >
+                        <div class="carousel-item active">
+                            <!-- comment  <img src="https://i.hizliresim.com/51c47fl.jpg"   alt="" width="100" height="100"/> -->
+                            <h:graphicImage library="img" value="#{tekBaslik.images}"  width="500" height="800"  />
+                            <div class="carousel-caption" style=" margin-left:320px; background-color: rgb(0,0,0); background-color: rgba(0,0,0, 0.4); width:638px" >   
+                                <p><h:commandLink style="text-decoration:none; font-size:25px; color:white" value="#{tekBaslik.recipeName}" action="#{dbBean.getRecipe(tekBaslik.recipeName)}" /></p>
+                            </div>   
+                        </div>   
+                    </ui:repeat>  
+                    <ui:repeat var="tekBaslik" value="#{dbBean.recipelistName}" varStatus="metadata"  begin="23" end="32" >
+                        <div class="carousel-item" >
+                            <h:graphicImage library="img" value="#{tekBaslik.images}"  width="700" height="800" />
+                            <div class="carousel-caption" style=" margin-left:320px;  background-color: rgb(0,0,0); background-color: rgba(0,0,0, 0.4); width:638px"  >   
+                                <p><h:commandLink style="text-decoration:none; font-size:25px; color:white;  " value="#{tekBaslik.recipeName}" action="#{dbBean.getRecipe(tekBaslik.recipeName)}"  /></p>
+                            </div>  
+                        </div>
+                    </ui:repeat>
+
+                </div>
+
+                <a class="carousel-control-prev" href="#demo" data-slide="prev" style="width:50%; margin:200px" >
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next" style="width:50%; margin:200px" >
+                    <span class="carousel-control-next-icon"></span>
+                </a> 
+            </div>   
+
+        </h:form>
+        <div class="orta_alan" style="margin-left:50px">
+            <div class="orta" style="background-image: url(https://i.hizliresim.com/pta2d9e.jpg ) ; background-size:cover " >
+                <div class="icerik" >
+
+                       <h3><a href="Corbalar.xhtml">ÇORBALAR</a></h3>
+                </div>
+            </div>
+            <div class="orta"  style="background-image: url(https://i.hizliresim.com/okyuinh.jpg ) ; background-size:cover; height:180px " >
+                <div class="icerik"> 
+                       <h3><a href="Salatalar.xhtml">SALATALAR</a></h3>
+                </div>
+            </div>
+            <div class="orta" style="background-image: url(https://i.hizliresim.com/2ucpto9.jpg ) ; background-size:cover; height:180px ">
+                <div class="icerik">
+                      <h3><a href="Zeytinyagli.xhtml">ZEYTİNYAĞLILAR</a></h3>
+                </div>
+            </div>
+            <div class="orta" style="background-image: url(https://i.hizliresim.com/ly71zqp.jpg) ; background-size:cover; height:180px " > 
+                <div class="icerik">
+                         <h3><a href="Ana Yemekler.xhtml">ANA YEMEKLER</a></h3>
+                </div>
+            </div>
+             <div class="orta" style="background-image: url(https://i.hizliresim.com/4fv158h.jpg ) ; background-size:cover; height:180px; " >
+                 <div class="icerik" >
+                      <h3 ><a href="Tatlılar.xhtml">TATLILAR</a></h3>
+                </div>
+            </div>
+          
+        </div>
+       
+   
+
+     <ui:include src="nether.xhtml" /> 
+    </h:body>
+</html>
+

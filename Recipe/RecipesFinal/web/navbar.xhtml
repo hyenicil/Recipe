@@ -1,0 +1,63 @@
+<ui:composition 
+    xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+    xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <hr width="100%"  style="border: 2px solid red; margin-top:5px;" />     
+    <h:form >
+        <div class="menu_bar"  >
+            <div class="logo">
+                <a  href="index.xhtml">  <h:graphicImage url="https://i.hizliresim.com/xc3rnyh.png"  /></a>
+            </div>
+            <div class="yazi"><a href="index.xhtml" style="text-decoration: none;">
+                    <h1>Yemekler</h1>
+                    <h2> benden</h2></a></div>
+            <div class="menu">
+
+                <div class="search-box">
+
+                    <h:inputText class="search-txt"  value="#{dbBean.aranan}" a:placeholder="ARA" />
+                    <h:commandButton class="search-btn" value="#{dbBean.recipeSearcLoader()}" action="Search.xhtml" image="https://i.hizliresim.com/nfs9tgx.png"></h:commandButton>
+
+                </div>
+
+                <ul>
+
+                    <li><h:button class="hesabim" value="ANASAYFA" outcome="index.xhtml"/></li>
+                    <div class="dr">
+                        <li><h:button class="hesabim" value="TARİFLER"/>
+                            <div >
+                                <h:commandButton class="hesabim" value="Çorbalar" action="Corbalar.xhtml"/>
+                                <h:commandButton class="hesabim" value="Zeytinyağlı" action="Zeytinyagli.xhtml" /> 
+                                <h:commandButton class="hesabim" value="Salatalar" action="Salatalar.xhtml"/>
+                                <h:commandButton class="hesabim" value="Ana Yemekler" action="Ana Yemekler.xhtml"/>
+                                <h:commandButton class="hesabim" value="Tatlılar" action="Tatlılar.xhtml"/>
+
+
+
+                            </div>
+                        </li>
+                    </div>
+                    <li><h:button class="hesabim" value="TRENDLER" outcome="Trendler.xhtml"  /></li>
+                    <li><h:commandButton class="hesabim" value="TARİF EKLE" action="#{dbBean.kayıtlıMı()}"  /></li>
+                    <li><h:button class="loginn" value="Giriş Yap/Üye Ol"  outcome="login.xhtml" rendered="#{dbBean.girisYapUyeOl}" /> </li>
+                    <li >
+
+                        <div class="dr">
+                            <h:button  class="hesabim" value="HESABIM"  style="margin-left:-20px"  rendered="#{dbBean.visibility}"/> 
+                            <div style="margin-left:-30px">
+                                <h:commandButton class="hesabim"  value="PROFİLİM" action="ProfilePage.xhtml"/>
+                                <h:commandButton class="hesabim" value="TARİFLERİM"  action="Tariflerim.xhtml" /> 
+                                <h:commandButton class="hesabim"  action="#{dbBean.logout()}" value="ÇIKIŞ"/>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div> 
+    </h:form>
+    <hr width="100%"  style="border: 2px solid red; margin-top:5px;" />   
+</ui:composition>

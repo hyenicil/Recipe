@@ -1,0 +1,111 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 02.Haz.2021, 01:41:56
+    Author     : HÜSEYİN
+*/
+
+*{
+    margin: 0;
+    padding:0 ;
+    font-family: sans-serif;
+}
+.hero{
+    height:100%;
+    width: 100%;
+    background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url( https://i.hizliresim.com/a2prwio.jpg );
+    background-position: center;
+    background-size: cover ;
+    position: absolute;
+}
+.form-box{
+    width:480px;
+    height:680px;
+    position: relative;
+    margin:10% auto;
+    background-color:#fff;
+    padding:5px;
+    margin-right: 12%;
+    overflow: hidden;
+    border:4px solid #073f68;
+    border-radius:10px;
+}
+
+
+.social-icons{
+margin-top: 70px;
+    margin: 30 px;
+    text-align: center;
+}
+.social-icons img{
+  width: 30px;
+  margin:0 30px;
+  box-shadow: 0 0 20px 0 #7f7f7f3d;
+  cursor:pointer;
+  border-radius:50%;
+}
+.input-group{
+    top:150px;
+    position:absolute;
+    width: 280px;
+    transition: .5s;
+}
+.input-field{
+    width: 100%;
+    padding:10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1 px solid #999;
+    outline:none;
+    background: transparent;
+}
+.submit-btn{
+    width: 85%;
+    padding:10px 30px;
+    cursor:pointer;
+    display: block;
+    margin:auto;
+    background: linear-gradient(to right,#ff105f,#073f68);
+    border:0;
+    outline: none;
+    border-radius: 30px;
+    margin-top:20px ;
+
+}
+.check-box{
+width:100%;
+}
+span{
+    color:#777;
+    font-size: 12px;
+    bottom:68px;
+    position: absolute;
+}
+.regi{
+    
+    margin-top: 50px;
+    background-color:#073f68;
+    color:white;
+    font-size:25 px;
+    text-decoration:none;
+    border:1px solid white;
+    font-weight: bold;
+    padding:10px;
+    transition: 0.5s;
+    opacity:1;
+    min-width:100%;
+  }
+.regi:hover{
+    color:#073f68;
+    background-color: white;
+    
+}
+
+#register{
+    left:100px;
+}

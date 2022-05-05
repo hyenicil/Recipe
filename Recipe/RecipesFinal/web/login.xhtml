@@ -1,0 +1,38 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h = "http://java.sun.com/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>     
+        <link rel="stylesheet" href="log.css" />
+        <title>Facelet Title</title>
+
+    </h:head>
+    <h:body> 
+
+        <div class="hero">
+            <div class="form-box">
+                     <div class="social-icons">  
+                    <img src="https://i.hizliresim.com/579qedi.png" />
+                    <img src="https://i.hizliresim.com/tv2jz8u.png" />
+                    <img src="https://i.hizliresim.com/r184aqm.png" />
+                </div>
+                <h:form id="login" class="input-group">
+                    <h:inputText class="input-field"  value="#{dbBean.userEmail}" a:placeholder="Email"  />
+                    <h:inputSecret class="check-box" value="#{dbBean.userPassword}" a:placeholder="Şifre"/>
+                    <h:commandButton type="submit" class="regis" value="Giriş Yap" action="#{dbBean.login()}"/>
+                    <h:button class="regis" value="Kaydol" outcome="register.xhtml"/>
+
+                </h:form>
+
+            </div>   
+
+        </div>
+
+
+    </h:body>
+</html>
+
+
+

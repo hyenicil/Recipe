@@ -1,0 +1,48 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h = "http://java.sun.com/jsf/html"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+            xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>     
+        <link rel="stylesheet" href="register.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <title>Facelet Title</title>
+
+    </h:head>
+    <h:body> 
+
+        <div class="hero">
+            <div class="form-box">
+                <div class="social-icons">
+                    <img src="https://i.hizliresim.com/579qedi.png" />
+                    <img src="https://i.hizliresim.com/tv2jz8u.png" />
+                    <img src="https://i.hizliresim.com/r184aqm.png" />
+                </div>
+
+                <h:form id="register" class="input-group">
+                    <h:inputText  class="input-field" value="#{dbBean.user.userName}"  a:placeholder="Kullanici Adi" required="true"/>
+                    <h:inputText  class="input-field" value="#{dbBean.user.surName}" a:placeholder="Kullanci Soyad" required="true"/>
+                    <h:inputText  class="input-field" value="#{dbBean.user.eMail}"   a:placeholder="Email"  required="true"/>
+                    <h:inputText  class="input-field" value="#{dbBean.user.nickName}"  a:placeholder="NickName" required="true"/>
+                    <h:inputSecret  class="input-field" value="#{dbBean.user.password}"   a:placeholder="Şifre"   required="true"/>
+                    <h:inputSecret class="input-field" value="Repeat Password" required="true"  a:placeholder="Şifre Tekrar"  label="Password"/>
+          
+                    <br></br><br></br>
+                    <input type="checkbox" class="yazi" value="Permission">  I agree to the terms and conditions</input>
+
+
+                    <h:commandButton type="submit" class="regi" value="Kaydol" action="#{dbBean.addUser()}"/>
+
+                </h:form>
+            </div>   
+
+        </div>
+     
+    </h:body>
+</html>
+
+
+
